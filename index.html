@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="left-side">
+        <div id="logo">
+            <img src="assets/odin-lined.png" alt="odin-lined">
+            <p>ODIN</p>
+        </div>
+        <p id="footer-image">Photo by <a href="https://unsplash.com/@haliewestphoto">Halie West</a> on <a
+                href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA">Unsplash</a></p>
+    </div>
+
+    <div id="right-side">
+        <div>
+            <p>This is not a real online service! You know you need something like this in your life to help you realize
+                your
+                deepest dreams.</p>
+            <p>Sign up <em>now</em> to get started.</p>
+            <br>
+            <p>You <em>know</em> you want to.</p>
+        </div>
+
+        <div id="form-input">
+            <form action="results.html" method="GET">
+                <p>Let's do this!</p>
+                <div class="column">
+                    <div>
+                        <label for="firstName">FIRST NAME</label><br>
+                        <input type="text" name="firstName" id="firstName" pattern="\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
+                            required>
+                    </div>
+                    <div class="column-right">
+                        <label for="lastName">LAST NAME</label><br>
+                        <input type="text" name="lastName" id="lastName" pattern="\b([A-ZÀ-ÿ][-,a-z. ']+[ ]*)+"
+                            required>
+                    </div>
+                </div>
+                <div class="column">
+                    <div>
+                        <label for="email">EMAIL</label><br>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="column-right">
+                        <label for="tel">PHONE NUMBER</label><br>
+                        <input type="tel" name="tel" id="tel" maxlength="13" required>
+                    </div>
+                </div>
+                <div class="column">
+                    <div>
+                        <label for="password">PASSWORD</label><br>
+                        <input type="password" name="password" id="password" required>
+                        <br>
+                        <span id="validatePass"></span>
+                    </div>
+                    <div class="column-right">
+                        <label for="confirmPassword">CONFIRM PASSWORD</label><br>
+                        <input type="password" name="confirmPassword" id="confirmPassword" required
+                            onkeyup="validatePassword()">
+                    </div>
+                </div>
+        </div>
+        <div id="submit-form">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a href="#">Log In</a></p>
+        </div>
+
+        </form>
+
+    </div>
+</body>
+
+</html>
